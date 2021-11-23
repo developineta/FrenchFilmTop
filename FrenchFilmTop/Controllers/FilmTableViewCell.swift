@@ -13,6 +13,8 @@ class FilmTableViewCell: UITableViewCell {
     
     @IBOutlet weak var imageForCell: UIImageView!
     
+    @IBOutlet weak var dateForCell: UILabel!
+    
     @IBOutlet weak var voteLabel: UILabel!
     
     

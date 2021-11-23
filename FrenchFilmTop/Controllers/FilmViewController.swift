@@ -91,6 +91,7 @@ extension FilmViewController: UITableViewDelegate, UITableViewDataSource {
         let item = filmItems[indexPath.row]
         cell.titleLabel.text = item.title
         cell.titleLabel.numberOfLines = 0
+        cell.dateForCell.text = "Release date: \(item.release_date)"
         cell.voteLabel.text = String(item.vote_average)
         cell.imageForCell.sd_setImage(with:URL(string: posterPath + item.poster_path), placeholderImage: UIImage(named: "film.jpg"))
         
@@ -98,7 +99,7 @@ extension FilmViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 300
+        return 250
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

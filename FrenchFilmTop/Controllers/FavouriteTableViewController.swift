@@ -73,12 +73,14 @@ class FavouriteTableViewController: UITableViewController {
         let item = savedItems[indexPath.row] // From CoreData to Cell
         cell.titleLabel.text = item.title
         cell.titleLabel.numberOfLines = 0
+        cell.dateForCell.text = "Release date: " + item.date!
+        cell.voteLabel.text = item.voteCount
         cell.imageForCell.sd_setImage(with: URL(string: item.image ?? ""), placeholderImage: UIImage(named: "film.jpg"))
         return cell
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 300
+        return 250
     }
     
     // Confirmation of delition
