@@ -3,6 +3,7 @@
     <device id="retina3_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -100,7 +101,7 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="xmL-4H-XhU"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="MyColorSet"/>
                         <constraints>
                             <constraint firstItem="jF7-bq-Jpe" firstAttribute="top" secondItem="xmL-4H-XhU" secondAttribute="top" id="Hw2-pZ-Rub"/>
                             <constraint firstItem="jF7-bq-Jpe" firstAttribute="leading" secondItem="xmL-4H-XhU" secondAttribute="leading" id="Jf3-cE-KXJ"/>
@@ -218,9 +219,9 @@
                                             </textView>
                                         </subviews>
                                     </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c0F-a7-BO2">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c0F-a7-BO2" customClass="DesignButton" customModule="FrenchFilmTop" customModuleProvider="target">
                                         <rect key="frame" x="68" y="363" width="152" height="31"/>
-                                        <color key="backgroundColor" systemColor="systemFillColor"/>
+                                        <color key="backgroundColor" systemColor="secondaryLabelColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="31" id="nBN-1e-TZF"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="152" id="r7e-L5-NSJ"/>
@@ -230,6 +231,11 @@
                                             <fontDescription key="titleFontDescription" style="UICTFontTextStyleBody"/>
                                             <color key="baseForegroundColor" systemColor="labelColor"/>
                                         </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="favouritesButtonTapped:" destination="ngn-pV-s0W" eventType="touchUpInside" id="0TE-TU-dBV"/>
                                         </connections>
@@ -238,7 +244,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="yYo-jr-6NP"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="MyColorSet"/>
                         <constraints>
                             <constraint firstItem="Jux-bS-wdP" firstAttribute="centerY" secondItem="yYo-jr-6NP" secondAttribute="centerY" id="2NR-zc-J4J"/>
                             <constraint firstItem="Jux-bS-wdP" firstAttribute="centerX" secondItem="yYo-jr-6NP" secondAttribute="centerX" id="UbC-Fo-f3u"/>
@@ -262,7 +268,7 @@
                 <navigationController id="gA3-o8-vpw" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="heart.fill" catalog="system" id="Aar-1A-bv2"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="bKL-ko-cgF">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -280,7 +286,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="8CJ-Mi-UCE">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="MyColorSet"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="favouritesCell" rowHeight="327" id="sGX-Cw-naN" customClass="FilmTableViewCell" customModule="FrenchFilmTop" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="44.5" width="320" height="327"/>
@@ -431,7 +437,7 @@
                 <navigationController id="riH-Gf-hID" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="film" catalog="system" id="ntm-5L-UfK"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="LD1-dD-A4v">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -443,6 +449,11 @@
             <point key="canvasLocation" x="-610" y="-139"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="c0F-a7-BO2">
+            <size key="intrinsicContentSize" width="137" height="31"/>
+        </designable>
+    </designables>
     <resources>
         <image name="arrowshape.turn.up.right.fill" catalog="system" width="128" height="106"/>
         <image name="film" catalog="system" width="128" height="93"/>
@@ -450,14 +461,17 @@
         <image name="info.circle.fill" catalog="system" width="128" height="121"/>
         <image name="pencil.circle" catalog="system" width="128" height="121"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>
+        <namedColor name="MyColorSet">
+            <color red="0.78536724989516193" green="0.84397573092607181" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemFillColor">
-            <color red="0.47058823529411764" green="0.47058823529411764" blue="0.50196078431372548" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

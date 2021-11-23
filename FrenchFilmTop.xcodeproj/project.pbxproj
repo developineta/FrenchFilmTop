@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC2E7289274CF2050007206B /* DesignButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2E7288274CF2050007206B /* DesignButton.swift */; };
+		FC2E728B274CF2120007206B /* BounceButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2E728A274CF2120007206B /* BounceButton.swift */; };
 		FCBBCCC5274BD30C007DDDEE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBBCCC4274BD30C007DDDEE /* AppDelegate.swift */; };
 		FCBBCCC7274BD30C007DDDEE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBBCCC6274BD30C007DDDEE /* SceneDelegate.swift */; };
 		FCBBCCCC274BD30C007DDDEE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCBBCCCA274BD30C007DDDEE /* Main.storyboard */; };
@@ -24,6 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FC2E7288274CF2050007206B /* DesignButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignButton.swift; sourceTree = "<group>"; };
+		FC2E728A274CF2120007206B /* BounceButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BounceButton.swift; sourceTree = "<group>"; };
 		FCBBCCC1274BD30C007DDDEE /* FrenchFilmTop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FrenchFilmTop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCBBCCC4274BD30C007DDDEE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCBBCCC6274BD30C007DDDEE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -126,6 +130,8 @@
 			isa = PBXGroup;
 			children = (
 				FCBBCCED274C01BB007DDDEE /* Alert.swift */,
+				FC2E7288274CF2050007206B /* DesignButton.swift */,
+				FC2E728A274CF2120007206B /* BounceButton.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -212,6 +218,8 @@
 				FCBBCCC5274BD30C007DDDEE /* AppDelegate.swift in Sources */,
 				FCBBCCE0274BD532007DDDEE /* FilmViewController.swift in Sources */,
 				FCBBCCC7274BD30C007DDDEE /* SceneDelegate.swift in Sources */,
+				FC2E728B274CF2120007206B /* BounceButton.swift in Sources */,
+				FC2E7289274CF2050007206B /* DesignButton.swift in Sources */,
 				FCBBCCEB274BDC68007DDDEE /* Film.swift in Sources */,
 				FCBBCCCF274BD30C007DDDEE /* FrenchFilmTop.xcdatamodeld in Sources */,
 				FCBBCCF0274C2804007DDDEE /* DetailViewController.swift in Sources */,
