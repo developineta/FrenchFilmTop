@@ -1,0 +1,473 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FCBBCCC5274BD30C007DDDEE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBBCCC4274BD30C007DDDEE /* AppDelegate.swift */; };
+		FCBBCCC7274BD30C007DDDEE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBBCCC6274BD30C007DDDEE /* SceneDelegate.swift */; };
+		FCBBCCCC274BD30C007DDDEE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCBBCCCA274BD30C007DDDEE /* Main.storyboard */; };
+		FCBBCCCF274BD30C007DDDEE /* FrenchFilmTop.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FCBBCCCD274BD30C007DDDEE /* FrenchFilmTop.xcdatamodeld */; };
+		FCBBCCD1274BD311007DDDEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCBBCCD0274BD311007DDDEE /* Assets.xcassets */; };
+		FCBBCCD4274BD311007DDDEE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCBBCCD2274BD311007DDDEE /* LaunchScreen.storyboard */; };
+		FCBBCCE0274BD532007DDDEE /* FilmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBBCCDF274BD532007DDDEE /* FilmViewController.swift */; };
+		FCBBCCE2274BD93C007DDDEE /* FavouriteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBBCCE1274BD93C007DDDEE /* FavouriteTableViewController.swift */; };
+		FCBBCCE4274BDA0D007DDDEE /* FilmTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBBCCE3274BDA0D007DDDEE /* FilmTableViewCell.swift */; };
+		FCBBCCE6274BDB79007DDDEE /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBBCCE5274BDB79007DDDEE /* WebViewController.swift */; };
+		FCBBCCE9274BDC52007DDDEE /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = FCBBCCE8274BDC52007DDDEE /* SDWebImage */; };
+		FCBBCCEB274BDC68007DDDEE /* Film.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBBCCEA274BDC68007DDDEE /* Film.swift */; };
+		FCBBCCEE274C01BB007DDDEE /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBBCCED274C01BB007DDDEE /* Alert.swift */; };
+		FCBBCCF0274C2804007DDDEE /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBBCCEF274C2804007DDDEE /* DetailViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FCBBCCC1274BD30C007DDDEE /* FrenchFilmTop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FrenchFilmTop.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCBBCCC4274BD30C007DDDEE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FCBBCCC6274BD30C007DDDEE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		FCBBCCCB274BD30C007DDDEE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FCBBCCCE274BD30C007DDDEE /* FrenchFilmTop.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FrenchFilmTop.xcdatamodel; sourceTree = "<group>"; };
+		FCBBCCD0274BD311007DDDEE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FCBBCCD3274BD311007DDDEE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FCBBCCD5274BD311007DDDEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FCBBCCDF274BD532007DDDEE /* FilmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmViewController.swift; sourceTree = "<group>"; };
+		FCBBCCE1274BD93C007DDDEE /* FavouriteTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteTableViewController.swift; sourceTree = "<group>"; };
+		FCBBCCE3274BDA0D007DDDEE /* FilmTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmTableViewCell.swift; sourceTree = "<group>"; };
+		FCBBCCE5274BDB79007DDDEE /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		FCBBCCEA274BDC68007DDDEE /* Film.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Film.swift; sourceTree = "<group>"; };
+		FCBBCCED274C01BB007DDDEE /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		FCBBCCEF274C2804007DDDEE /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FCBBCCBE274BD30C007DDDEE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCBBCCE9274BDC52007DDDEE /* SDWebImage in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FCBBCCB8274BD30C007DDDEE = {
+			isa = PBXGroup;
+			children = (
+				FCBBCCC3274BD30C007DDDEE /* FrenchFilmTop */,
+				FCBBCCC2274BD30C007DDDEE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FCBBCCC2274BD30C007DDDEE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FCBBCCC1274BD30C007DDDEE /* FrenchFilmTop.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FCBBCCC3274BD30C007DDDEE /* FrenchFilmTop */ = {
+			isa = PBXGroup;
+			children = (
+				FCBBCCEC274C01A9007DDDEE /* Extension */,
+				FCBBCCDE274BD36C007DDDEE /* Model */,
+				FCBBCCDB274BD322007DDDEE /* Delegate */,
+				FCBBCCDD274BD355007DDDEE /* Controllers */,
+				FCBBCCDC274BD340007DDDEE /* View */,
+				FCBBCCD0274BD311007DDDEE /* Assets.xcassets */,
+				FCBBCCD5274BD311007DDDEE /* Info.plist */,
+				FCBBCCCD274BD30C007DDDEE /* FrenchFilmTop.xcdatamodeld */,
+			);
+			path = FrenchFilmTop;
+			sourceTree = "<group>";
+		};
+		FCBBCCDB274BD322007DDDEE /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				FCBBCCC4274BD30C007DDDEE /* AppDelegate.swift */,
+				FCBBCCC6274BD30C007DDDEE /* SceneDelegate.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		FCBBCCDC274BD340007DDDEE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FCBBCCCA274BD30C007DDDEE /* Main.storyboard */,
+				FCBBCCD2274BD311007DDDEE /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FCBBCCDD274BD355007DDDEE /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FCBBCCDF274BD532007DDDEE /* FilmViewController.swift */,
+				FCBBCCE3274BDA0D007DDDEE /* FilmTableViewCell.swift */,
+				FCBBCCEF274C2804007DDDEE /* DetailViewController.swift */,
+				FCBBCCE1274BD93C007DDDEE /* FavouriteTableViewController.swift */,
+				FCBBCCE5274BDB79007DDDEE /* WebViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		FCBBCCDE274BD36C007DDDEE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FCBBCCEA274BDC68007DDDEE /* Film.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FCBBCCEC274C01A9007DDDEE /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				FCBBCCED274C01BB007DDDEE /* Alert.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FCBBCCC0274BD30C007DDDEE /* FrenchFilmTop */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FCBBCCD8274BD311007DDDEE /* Build configuration list for PBXNativeTarget "FrenchFilmTop" */;
+			buildPhases = (
+				FCBBCCBD274BD30C007DDDEE /* Sources */,
+				FCBBCCBE274BD30C007DDDEE /* Frameworks */,
+				FCBBCCBF274BD30C007DDDEE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FrenchFilmTop;
+			packageProductDependencies = (
+				FCBBCCE8274BDC52007DDDEE /* SDWebImage */,
+			);
+			productName = FrenchFilmTop;
+			productReference = FCBBCCC1274BD30C007DDDEE /* FrenchFilmTop.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FCBBCCB9274BD30C007DDDEE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1310;
+				LastUpgradeCheck = 1310;
+				TargetAttributes = {
+					FCBBCCC0274BD30C007DDDEE = {
+						CreatedOnToolsVersion = 13.1;
+					};
+				};
+			};
+			buildConfigurationList = FCBBCCBC274BD30C007DDDEE /* Build configuration list for PBXProject "FrenchFilmTop" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FCBBCCB8274BD30C007DDDEE;
+			packageReferences = (
+				FCBBCCE7274BDC52007DDDEE /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
+			productRefGroup = FCBBCCC2274BD30C007DDDEE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FCBBCCC0274BD30C007DDDEE /* FrenchFilmTop */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FCBBCCBF274BD30C007DDDEE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCBBCCD4274BD311007DDDEE /* LaunchScreen.storyboard in Resources */,
+				FCBBCCD1274BD311007DDDEE /* Assets.xcassets in Resources */,
+				FCBBCCCC274BD30C007DDDEE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FCBBCCBD274BD30C007DDDEE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCBBCCE4274BDA0D007DDDEE /* FilmTableViewCell.swift in Sources */,
+				FCBBCCE2274BD93C007DDDEE /* FavouriteTableViewController.swift in Sources */,
+				FCBBCCC5274BD30C007DDDEE /* AppDelegate.swift in Sources */,
+				FCBBCCE0274BD532007DDDEE /* FilmViewController.swift in Sources */,
+				FCBBCCC7274BD30C007DDDEE /* SceneDelegate.swift in Sources */,
+				FCBBCCEB274BDC68007DDDEE /* Film.swift in Sources */,
+				FCBBCCCF274BD30C007DDDEE /* FrenchFilmTop.xcdatamodeld in Sources */,
+				FCBBCCF0274C2804007DDDEE /* DetailViewController.swift in Sources */,
+				FCBBCCEE274C01BB007DDDEE /* Alert.swift in Sources */,
+				FCBBCCE6274BDB79007DDDEE /* WebViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FCBBCCCA274BD30C007DDDEE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FCBBCCCB274BD30C007DDDEE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FCBBCCD2274BD311007DDDEE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FCBBCCD3274BD311007DDDEE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FCBBCCD6274BD311007DDDEE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FCBBCCD7274BD311007DDDEE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FCBBCCD9274BD311007DDDEE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6D8CLTK8MN;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FrenchFilmTop/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "bootcamp-homework.FrenchFilmTop";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FCBBCCDA274BD311007DDDEE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6D8CLTK8MN;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FrenchFilmTop/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "bootcamp-homework.FrenchFilmTop";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FCBBCCBC274BD30C007DDDEE /* Build configuration list for PBXProject "FrenchFilmTop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FCBBCCD6274BD311007DDDEE /* Debug */,
+				FCBBCCD7274BD311007DDDEE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FCBBCCD8274BD311007DDDEE /* Build configuration list for PBXNativeTarget "FrenchFilmTop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FCBBCCD9274BD311007DDDEE /* Debug */,
+				FCBBCCDA274BD311007DDDEE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FCBBCCE7274BDC52007DDDEE /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FCBBCCE8274BDC52007DDDEE /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FCBBCCE7274BDC52007DDDEE /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		FCBBCCCD274BD30C007DDDEE /* FrenchFilmTop.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FCBBCCCE274BD30C007DDDEE /* FrenchFilmTop.xcdatamodel */,
+			);
+			currentVersion = FCBBCCCE274BD30C007DDDEE /* FrenchFilmTop.xcdatamodel */;
+			path = FrenchFilmTop.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = FCBBCCB9274BD30C007DDDEE /* Project object */;
+}
