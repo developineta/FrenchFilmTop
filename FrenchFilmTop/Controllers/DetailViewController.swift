@@ -10,18 +10,16 @@ import UIKit
 import CoreData
 
 class DetailViewController: UIViewController {
-
+    
     var savedItems = [FrenchFilms]() // CoreData
     var managedObjectContext: NSManagedObjectContext?
     
     var imageString = String()
+    var posterString = String()
     var titleString = String()
     var voteDouble = Double()
     var dateString = String()
     var descriptionString = String()
-    var mdbUrl = String()
-    var mdbQuery = String()
-    var mdbKey = "882c14ce"
     
     @IBOutlet weak var detailTitle: UILabel!
     @IBOutlet weak var detailImage: UIImageView!
@@ -31,17 +29,12 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         detailTitle.text = titleString
         detailVotes.text = String(voteDouble)
         detailDate.text = "Release date: \(dateString)"
         detailOverview.text = descriptionString
         detailImage.sd_setImage(with: URL(string: imageString), placeholderImage: UIImage(named: "film.jpg"))
         
-        self.mdbQuery = (titleString.components(separatedBy: " ").joined(separator: "-"))
-        print("Film title for url: ", mdbQuery)
-        
-        self.mdbUrl = "http://www.omdbapi.com/?t=\(mdbQuery)&apikey=\(mdbKey)"
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         managedObjectContext = appDelegate.persistentContainer.viewContext
     }
@@ -71,27 +64,27 @@ class DetailViewController: UIViewController {
     @IBAction func favouritesButtonTapped(_ sender: Any) {
         let filmItem = FrenchFilms(context: self.managedObjectContext!)
         filmItem.title = titleString
-        filmItem.image = imageString
+        filmItem.image = posterString
         filmItem.voteCount = String(voteDouble)
         filmItem.overview = descriptionString
         filmItem.date = dateString
         
         if !imageString.isEmpty{
-            filmItem.image = imageString
+            filmItem.image = posterString
         }
-        
+        print("Poster string", posterString)
         self.savedItems.append(filmItem)
         saveData()
     }
-
-    // MARK: - Navigation
-
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-         // Get the new view controller using segue.destination.
-         let vc: WebViewController = segue.destination as! WebViewController
-         vc.urlString = mdbUrl
-         // Pass the selected object to the new view controller.
-         print("URL to join: ", mdbUrl)
-     }
+    
+    @IBAction func shareButtonTapped(_ sender: Any) {
+        shareData([titleString])
+    }
+    
+    func shareData(_ dataToShare: [Any]) {
+        let activityViewController = UIActivityViewController(activityItems: [titleString], applicationActivities: nil)
+        
+        self.present(activityViewController, animated: true, completion: nil)
+    }
 }
 

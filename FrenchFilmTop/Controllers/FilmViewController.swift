@@ -17,7 +17,7 @@ class FilmViewController: UIViewController {
     var filmItems: [FilmItem] = []
     var searchResult = "popular"
     var apiKey = "fb24ef70820fbc0c04c81f1ae3541056"
-    var posterPath = "https://image.tmdb.org/t/p/w500"
+    var imagePath = "https://image.tmdb.org/t/p/w500"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -92,7 +92,7 @@ extension FilmViewController: UITableViewDelegate, UITableViewDataSource {
         cell.titleLabel.numberOfLines = 0
         cell.dateForCell.text = "Release date: \(item.release_date)"
         cell.voteLabel.text = String(item.vote_average)
-        cell.imageForCell.sd_setImage(with:URL(string: posterPath + item.poster_path), placeholderImage: UIImage(named: "film.jpg"))
+        cell.imageForCell.sd_setImage(with:URL(string: imagePath + item.poster_path), placeholderImage: UIImage(named: "film.jpg"))
         
         return cell
     }
@@ -108,10 +108,11 @@ extension FilmViewController: UITableViewDelegate, UITableViewDataSource {
         
         // DetailViewController names get values from Model/ Film
         vc.titleString = item.title
-        vc.imageString = "\(posterPath)\(item.backdrop_path)"
+        vc.imageString = "\(imagePath)\(item.backdrop_path)"
         vc.voteDouble = item.vote_average
         vc.dateString = item.release_date
         vc.descriptionString = item.overview
+        vc.posterString = "\(imagePath)\(item.poster_path)"
         
         //        present(vc, animated: true, completion: nil)
         navigationController?.pushViewController(vc, animated: true)
