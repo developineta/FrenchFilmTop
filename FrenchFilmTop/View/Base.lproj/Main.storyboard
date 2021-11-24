@@ -21,29 +21,29 @@
                                 <rect key="frame" x="0.0" y="44" width="320" height="488"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <activityIndicatorView key="tableFooterView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" id="nHL-6E-50H">
-                                    <rect key="frame" x="0.0" y="344" width="320" height="44"/>
+                                    <rect key="frame" x="0.0" y="373" width="320" height="44"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 </activityIndicatorView>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="filmCell" rowHeight="277" id="BN4-7b-qXZ" customClass="FilmTableViewCell" customModule="FrenchFilmTop" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="320" height="277"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="filmCell" rowHeight="306" id="BN4-7b-qXZ" customClass="FilmTableViewCell" customModule="FrenchFilmTop" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="320" height="306"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BN4-7b-qXZ" id="Lh4-Lv-AQ1">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="277"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="306"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="XV8-Z2-ukv">
-                                                    <rect key="frame" x="16" y="11" width="288" height="255"/>
+                                                    <rect key="frame" x="16" y="11" width="288" height="284"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shang-chi" translatesAutoresizingMaskIntoConstraints="NO" id="7a1-57-cpc">
-                                                            <rect key="frame" x="0.0" y="0.0" width="148" height="255"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="148" height="284"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="16p-Qu-6Zi"/>
                                                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="210" id="xwt-cq-9eh"/>
                                                             </constraints>
                                                         </imageView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="sCC-p7-Xs3">
-                                                            <rect key="frame" x="164" y="53.5" width="124" height="148"/>
+                                                            <rect key="frame" x="164" y="68" width="124" height="148"/>
                                                             <subviews>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="sGI-Pa-Z0D">
                                                                     <rect key="frame" x="0.0" y="0.0" width="124" height="45"/>
@@ -161,15 +161,82 @@
                                 <action selector="infoButtonTapped:" destination="qRG-c1-uzX" id="OSI-xi-LxT"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="moon.circle.fill" catalog="system" id="wJz-Gn-iUE">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="modeButtonTapped:" destination="qRG-c1-uzX" id="9vq-26-T4a"/>
+                                <segue destination="AEB-6c-0ac" kind="show" identifier="modeChange" id="5Vm-p1-JwF"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="activityIndicatorView" destination="nHL-6E-50H" id="P0t-28-cz8"/>
+                        <outlet property="appearenceView" destination="wJz-Gn-iUE" id="bXF-vz-yzp"/>
                         <outlet property="tableViewOutlet" destination="jF7-bq-Jpe" id="cUE-re-u2s"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cFv-Di-NRn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="159.375" y="-140"/>
+        </scene>
+        <!--Appearence View Controller-->
+        <scene sceneID="yZ3-G5-wNz">
+            <objects>
+                <viewController storyboardIdentifier="AppearenceViewController" id="AEB-6c-0ac" customClass="AppearenceViewController" customModule="FrenchFilmTop" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RiK-cL-NEA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="47" translatesAutoresizingMaskIntoConstraints="NO" id="lKh-6R-SHk">
+                                <rect key="frame" x="73" y="132.5" width="180" height="142"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Light Mode is ON" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ned-lB-n1y">
+                                        <rect key="frame" x="0.0" y="0.0" width="180" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="180" id="Y9X-R3-Oe7"/>
+                                            <constraint firstAttribute="height" constant="60" id="jwA-dY-1kA"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uOP-zT-Aac" customClass="DesignButton" customModule="FrenchFilmTop" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="107" width="180" height="35"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="7uT-ST-b7Z"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="180" id="WdQ-OB-f9s"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Open Settings"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderRadius">
+                                                <integer key="value" value="6"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="openSettingsButton:" destination="AEB-6c-0ac" eventType="touchUpInside" id="BAz-0F-5gw"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="8xA-YB-5jm"/>
+                        <color key="backgroundColor" name="MyColorSet"/>
+                        <constraints>
+                            <constraint firstItem="lKh-6R-SHk" firstAttribute="centerX" secondItem="8xA-YB-5jm" secondAttribute="centerX" constant="3" id="Pxu-B2-fdr"/>
+                            <constraint firstItem="lKh-6R-SHk" firstAttribute="centerY" secondItem="8xA-YB-5jm" secondAttribute="centerY" constant="-34" id="bgF-lo-jjb"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="GcV-Q2-Xad"/>
+                    <connections>
+                        <outlet property="textLabel" destination="ned-lB-n1y" id="e9w-vV-fge"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ban-jJ-I7s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="954" y="-140"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="8YN-2O-AZx">
@@ -179,129 +246,116 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="bUW-Rf-QRX">
-                                <rect key="frame" x="25.5" y="55.5" width="269" height="369"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="shang-chi" translatesAutoresizingMaskIntoConstraints="NO" id="bdj-m3-ca6">
+                                <rect key="frame" x="25.5" y="38" width="147" height="220"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="220" id="7UL-Ny-lci"/>
+                                    <constraint firstAttribute="width" constant="147" id="nTE-nU-YzS"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="4JO-B8-Uf3">
+                                <rect key="frame" x="186.5" y="38" width="108" height="189"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="GFp-FB-u9U">
-                                        <rect key="frame" x="0.0" y="0.0" width="269" height="328"/>
-                                        <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="0df-Qq-ouJ">
-                                                <rect key="frame" x="0.0" y="0.0" width="269" height="220"/>
-                                                <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shang-chi" translatesAutoresizingMaskIntoConstraints="NO" id="bdj-m3-ca6">
-                                                        <rect key="frame" x="0.0" y="0.0" width="147" height="220"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="220" id="7UL-Ny-lci"/>
-                                                            <constraint firstAttribute="width" constant="147" id="nTE-nU-YzS"/>
-                                                        </constraints>
-                                                    </imageView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="4JO-B8-Uf3">
-                                                        <rect key="frame" x="161" y="0.0" width="108" height="220"/>
-                                                        <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="opY-D4-YV0">
-                                                                <rect key="frame" x="0.0" y="0.0" width="108" height="99"/>
-                                                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="99" id="f6x-iO-GsT"/>
-                                                                    <constraint firstAttribute="width" constant="108" id="x5k-Pp-nti"/>
-                                                                </constraints>
-                                                                <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="14"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="rCZ-pp-2as">
-                                                                <rect key="frame" x="0.0" y="110" width="108" height="31"/>
-                                                                <subviews>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RXC-YC-NAY">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="63" height="31"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="33" id="BSf-B7-oYQ"/>
-                                                                        </constraints>
-                                                                        <state key="normal" title="Button"/>
-                                                                        <buttonConfiguration key="configuration" style="plain" image="star.fill" catalog="system">
-                                                                            <color key="baseForegroundColor" red="1" green="0.87208425000000001" blue="0.1897312545" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                        </buttonConfiguration>
-                                                                    </button>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="votes" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Gb-q1-UHy">
-                                                                        <rect key="frame" x="71" y="0.0" width="37" height="31"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="37" id="R0U-h6-Jr7"/>
-                                                                        </constraints>
-                                                                        <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="12"/>
-                                                                        <nil key="textColor"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                </subviews>
-                                                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
-                                                                <userDefinedRuntimeAttributes>
-                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                                        <integer key="value" value="6"/>
-                                                                    </userDefinedRuntimeAttribute>
-                                                                </userDefinedRuntimeAttributes>
-                                                            </stackView>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Release date:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C1H-j2-kJx">
-                                                                <rect key="frame" x="0.0" y="152" width="108" height="68"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="37" id="qVm-In-h98"/>
-                                                                </constraints>
-                                                                <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="12"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                        </subviews>
-                                                    </stackView>
-                                                </subviews>
-                                            </stackView>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="3fx-Vm-vHj">
-                                                <rect key="frame" x="0.0" y="228" width="269" height="100"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="100" id="aSw-Mm-o76"/>
-                                                </constraints>
-                                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                                <color key="textColor" systemColor="labelColor"/>
-                                                <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="12"/>
-                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                        <integer key="value" value="10"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </textView>
-                                        </subviews>
-                                    </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c0F-a7-BO2" customClass="DesignButton" customModule="FrenchFilmTop" customModuleProvider="target">
-                                        <rect key="frame" x="58.5" y="338" width="152" height="31"/>
-                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="opY-D4-YV0">
+                                        <rect key="frame" x="0.0" y="0.0" width="108" height="99"/>
+                                        <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="31" id="nBN-1e-TZF"/>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="152" id="r7e-L5-NSJ"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="99" id="f6x-iO-GsT"/>
+                                            <constraint firstAttribute="width" constant="108" id="x5k-Pp-nti"/>
                                         </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Add to Favourites">
-                                            <fontDescription key="titleFontDescription" style="UICTFontTextStyleHeadline"/>
-                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </buttonConfiguration>
+                                        <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="rCZ-pp-2as">
+                                        <rect key="frame" x="0.0" y="110" width="108" height="31"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RXC-YC-NAY">
+                                                <rect key="frame" x="0.0" y="0.0" width="63" height="31"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="33" id="BSf-B7-oYQ"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="star.fill" catalog="system">
+                                                    <color key="baseForegroundColor" red="1" green="0.87208425000000001" blue="0.1897312545" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="votes" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Gb-q1-UHy">
+                                                <rect key="frame" x="71" y="0.0" width="37" height="31"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="37" id="R0U-h6-Jr7"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                 <integer key="value" value="6"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="favouritesButtonTapped:" destination="ngn-pV-s0W" eventType="touchUpInside" id="0TE-TU-dBV"/>
-                                        </connections>
-                                    </button>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Release date:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C1H-j2-kJx">
+                                        <rect key="frame" x="0.0" y="152" width="108" height="37"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="37" id="qVm-In-h98"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="13"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="UY3-YB-TmZ">
+                                <rect key="frame" x="25.5" y="373" width="152" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c0F-a7-BO2" customClass="DesignButton" customModule="FrenchFilmTop" customModuleProvider="target">
+                                <rect key="frame" x="76" y="429" width="152" height="31"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="nBN-1e-TZF"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="152" id="r7e-L5-NSJ"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Add to Favourites">
+                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleHeadline"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="favouritesButtonTapped:" destination="ngn-pV-s0W" eventType="touchUpInside" id="0TE-TU-dBV"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="3fx-Vm-vHj">
+                                <rect key="frame" x="26" y="304" width="269" height="100"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="aSw-Mm-o76"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="yYo-jr-6NP"/>
                         <color key="backgroundColor" name="MyColorSet"/>
                         <color key="tintColor" systemColor="labelColor"/>
-                        <constraints>
-                            <constraint firstItem="bUW-Rf-QRX" firstAttribute="centerX" secondItem="yYo-jr-6NP" secondAttribute="centerX" id="8oi-Wt-bab"/>
-                            <constraint firstItem="bUW-Rf-QRX" firstAttribute="centerY" secondItem="yYo-jr-6NP" secondAttribute="centerY" id="qu4-N1-VeV"/>
-                        </constraints>
                     </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="detailDate" destination="C1H-j2-kJx" id="Esq-8I-86I"/>
                         <outlet property="detailImage" destination="bdj-m3-ca6" id="ZzG-zk-BAm"/>
@@ -312,7 +366,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AQ2-29-upS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="956.25" y="-140"/>
+            <point key="canvasLocation" x="1665" y="-140"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ai5-aS-BkS">
@@ -320,7 +374,7 @@
                 <navigationController id="gA3-o8-vpw" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="heart.fill" catalog="system" id="Aar-1A-bv2"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="bKL-ko-cgF">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" name="NavigationColors"/>
                         <color key="barTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -334,7 +388,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FJP-B0-4Qg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-610" y="562"/>
+            <point key="canvasLocation" x="-611" y="609"/>
         </scene>
         <!--My Favourites-->
         <scene sceneID="KOm-Ly-g6n">
@@ -467,7 +521,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f25-mn-bji" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="159.375" y="561.25"/>
+            <point key="canvasLocation" x="159" y="609"/>
         </scene>
         <!--Web View Controller-->
         <scene sceneID="UXW-kT-23B">
@@ -495,10 +549,14 @@
                             <constraint firstItem="e0d-t7-U1V" firstAttribute="leading" secondItem="3QH-cZ-0IN" secondAttribute="leading" id="zi2-Me-xe3"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Hg5-AD-I5S"/>
+                    <connections>
+                        <outlet property="webView" destination="e0d-t7-U1V" id="xX7-vA-7uH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="USq-mH-xA2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="956" y="561"/>
+            <point key="canvasLocation" x="1665" y="609"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="TdQ-gT-ZR3">
@@ -548,19 +606,23 @@
         <designable name="c0F-a7-BO2">
             <size key="intrinsicContentSize" width="142" height="31"/>
         </designable>
+        <designable name="uOP-zT-Aac">
+            <size key="intrinsicContentSize" width="116.5" height="31"/>
+        </designable>
     </designables>
     <resources>
         <image name="film" catalog="system" width="128" height="93"/>
         <image name="heart.fill" catalog="system" width="128" height="109"/>
         <image name="info.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="moon.circle.fill" catalog="system" width="128" height="121"/>
         <image name="pencil.circle" catalog="system" width="128" height="121"/>
         <image name="shang-chi" width="500" height="750"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>
         <namedColor name="MyColorSet">
-            <color red="0.86019871772740431" green="0.86871553671480428" blue="0.86871553671480428" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.86000001430511475" green="0.86900001764297485" blue="0.86900001764297485" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="NavigationColors">
-            <color red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.13300000131130219" green="0.13300000131130219" blue="0.13300000131130219" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

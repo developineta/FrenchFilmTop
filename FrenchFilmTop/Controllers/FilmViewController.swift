@@ -12,10 +12,9 @@ class FilmViewController: UIViewController {
     
     @IBOutlet weak var tableViewOutlet: UITableView!
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
-    
+    @IBOutlet weak var appearenceView: UIBarButtonItem!
     
     var filmItems: [FilmItem] = []
-    
     var searchResult = "popular"
     var apiKey = "fb24ef70820fbc0c04c81f1ae3541056"
     var posterPath = "https://image.tmdb.org/t/p/w500"
@@ -26,7 +25,7 @@ class FilmViewController: UIViewController {
     }
     
     @IBAction func infoButtonTapped(_ sender: Any) {
-        basicAlert(title: "French Film Top Info", message: "Press share button to share your favourite film")
+        basicAlert(title: "French Film Top Info", message: "Press the MOON button to change light or dark mode")
     }
     
     func activityIndicator(animated: Bool){
@@ -99,7 +98,7 @@ extension FilmViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 250
+        return 300
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -117,15 +116,9 @@ extension FilmViewController: UITableViewDelegate, UITableViewDataSource {
         //        present(vc, animated: true, completion: nil)
         navigationController?.pushViewController(vc, animated: true)
     }
-}
     
-    /*
+
      // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
+
+}
+ 

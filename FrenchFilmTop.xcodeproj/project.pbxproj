@@ -23,6 +23,7 @@
 		FCBBCCEB274BDC68007DDDEE /* Film.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBBCCEA274BDC68007DDDEE /* Film.swift */; };
 		FCBBCCEE274C01BB007DDDEE /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBBCCED274C01BB007DDDEE /* Alert.swift */; };
 		FCBBCCF0274C2804007DDDEE /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBBCCEF274C2804007DDDEE /* DetailViewController.swift */; };
+		FCC8DAFF274E315700B468A8 /* AppearenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC8DAFE274E315700B468A8 /* AppearenceViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		FCBBCCEA274BDC68007DDDEE /* Film.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Film.swift; sourceTree = "<group>"; };
 		FCBBCCED274C01BB007DDDEE /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		FCBBCCEF274C2804007DDDEE /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		FCC8DAFE274E315700B468A8 /* AppearenceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearenceViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 				FCBBCCEF274C2804007DDDEE /* DetailViewController.swift */,
 				FCBBCCE1274BD93C007DDDEE /* FavouriteTableViewController.swift */,
 				FCBBCCE5274BDB79007DDDEE /* WebViewController.swift */,
+				FCC8DAFE274E315700B468A8 /* AppearenceViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 				FCBBCCC7274BD30C007DDDEE /* SceneDelegate.swift in Sources */,
 				FC2E728B274CF2120007206B /* BounceButton.swift in Sources */,
 				FC2E7289274CF2050007206B /* DesignButton.swift in Sources */,
+				FCC8DAFF274E315700B468A8 /* AppearenceViewController.swift in Sources */,
 				FCBBCCEB274BDC68007DDDEE /* Film.swift in Sources */,
 				FCBBCCCF274BD30C007DDDEE /* FrenchFilmTop.xcdatamodeld in Sources */,
 				FCBBCCF0274C2804007DDDEE /* DetailViewController.swift in Sources */,

@@ -19,6 +19,9 @@ class DetailViewController: UIViewController {
     var voteDouble = Double()
     var dateString = String()
     var descriptionString = String()
+    var mdbUrl = String()
+    var mdbQuery = String()
+    var mdbKey = "882c14ce"
     
     @IBOutlet weak var detailTitle: UILabel!
     @IBOutlet weak var detailImage: UIImageView!
@@ -34,7 +37,11 @@ class DetailViewController: UIViewController {
         detailDate.text = "Release date: \(dateString)"
         detailOverview.text = descriptionString
         detailImage.sd_setImage(with: URL(string: imageString), placeholderImage: UIImage(named: "film.jpg"))
-
+        
+        self.mdbQuery = (titleString.components(separatedBy: " ").joined(separator: "-"))
+        print("Film title for url: ", mdbQuery)
+        
+        self.mdbUrl = "http://www.omdbapi.com/?t=\(mdbQuery)&apikey=\(mdbKey)"
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         managedObjectContext = appDelegate.persistentContainer.viewContext
     }
@@ -77,14 +84,14 @@ class DetailViewController: UIViewController {
         saveData()
     }
 
-    /*
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+         // Get the new view controller using segue.destination.
+         let vc: WebViewController = segue.destination as! WebViewController
+         vc.urlString = mdbUrl
+         // Pass the selected object to the new view controller.
+         print("URL to join: ", mdbUrl)
+     }
 }
+
