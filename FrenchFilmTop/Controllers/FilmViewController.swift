@@ -108,7 +108,7 @@ extension FilmViewController: UITableViewDelegate, UITableViewDataSource {
         
         // DetailViewController names get values from Model/ Film
         vc.titleString = item.title
-        vc.imageString = "\(posterPath)\(item.poster_path)"
+        vc.imageString = "\(posterPath)\(item.backdrop_path)"
         vc.voteDouble = item.vote_average
         vc.dateString = item.release_date
         vc.descriptionString = item.overview

@@ -14,12 +14,15 @@ struct FilmItem: Decodable {
     var vote_average: Double
     var release_date: String
     var overview: String
+    var backdrop_path: String
+    
     
     enum CodingKeys: CodingKey{
         case title, overview
         case poster_path
         case vote_average
         case release_date
+        case backdrop_path
     }
 }
 
