@@ -14,6 +14,8 @@ class FavouriteTableViewController: UITableViewController {
     var savedItems = [FrenchFilms]() // CoreData
     var managedObjectContext: NSManagedObjectContext?
     
+    var checkMark = Bool()
+    
     @IBOutlet weak var editButton: UIBarButtonItem!
     
     override func viewDidLoad() {
@@ -63,7 +65,7 @@ class FavouriteTableViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of rows
         return savedItems.count
     }
-
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "favouritesCell", for: indexPath) as? FilmTableViewCell else{
@@ -78,6 +80,25 @@ class FavouriteTableViewController: UITableViewController {
         cell.imageForCell.sd_setImage(with: URL(string: item.image ?? ""), placeholderImage: UIImage(named: "film.jpg"))
         return cell
     }
+    
+    /*override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
+        //let indexPath = tableView.indexPathForSelectedRow() //optional, to get from any UIButton for example
+        let item = savedItems[indexPath.row]
+        let currentCell = tableView.cellForRowAtIndexPath(item) as UITableViewCell
+
+        print(currentCell.textLabel!.text)*/
+    
+        /*override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+            shopping[indexPath.row].isCompleted = !shopping[indexPath.row].isCompleted
+            saveData()
+        }*/
+    /*override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let item = savedItems[indexPath.row]
+        cell.checkMark != item.completed
+        //savedItems[indexPath.row].completed = !savedItems[indexPath.row].completed
+        saveData()
+    }*/
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 250

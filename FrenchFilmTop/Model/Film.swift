@@ -15,6 +15,8 @@ struct FilmItem: Decodable {
     var release_date: String
     var overview: String
     var backdrop_path: String
+    var vote_count: Int
+    //var completed: Bool
     
     
     enum CodingKeys: CodingKey{
@@ -23,6 +25,8 @@ struct FilmItem: Decodable {
         case vote_average
         case release_date
         case backdrop_path
+        case vote_count
+        //case completed
     }
 }
 

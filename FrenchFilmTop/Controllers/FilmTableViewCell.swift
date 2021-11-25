@@ -17,6 +17,7 @@ class FilmTableViewCell: UITableViewCell {
     
     @IBOutlet weak var voteLabel: UILabel!
     
+    @IBOutlet weak var numberOfVotes: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -26,5 +27,4 @@ class FilmTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
-
 }

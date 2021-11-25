@@ -20,12 +20,14 @@ class DetailViewController: UIViewController {
     var voteDouble = Double()
     var dateString = String()
     var descriptionString = String()
+    var checkCompleted = Bool()
     
     @IBOutlet weak var detailTitle: UILabel!
     @IBOutlet weak var detailImage: UIImageView!
     @IBOutlet weak var detailVotes: UILabel!
     @IBOutlet weak var detailDate: UILabel!
     @IBOutlet weak var detailOverview: UITextView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +36,8 @@ class DetailViewController: UIViewController {
         detailDate.text = "Release date: \(dateString)"
         detailOverview.text = descriptionString
         detailImage.sd_setImage(with: URL(string: imageString), placeholderImage: UIImage(named: "film.jpg"))
+        
+        self.checkCompleted = false
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         managedObjectContext = appDelegate.persistentContainer.viewContext
@@ -62,12 +66,15 @@ class DetailViewController: UIViewController {
     let savedMessage = "Go to heart icon to see your favourite film list"
     
     @IBAction func favouritesButtonTapped(_ sender: Any) {
+        self.checkCompleted = false
         let filmItem = FrenchFilms(context: self.managedObjectContext!)
         filmItem.title = titleString
         filmItem.image = posterString
         filmItem.voteCount = String(voteDouble)
         filmItem.overview = descriptionString
         filmItem.date = dateString
+        filmItem.completed = checkCompleted
+        print("Bool false expected", filmItem.completed)
         
         if !imageString.isEmpty{
             filmItem.image = posterString
@@ -76,6 +83,22 @@ class DetailViewController: UIViewController {
         self.savedItems.append(filmItem)
         saveData()
     }
+    
+//    switch findButton.titleLabel?.text{
+//    case "FIND":
+//        findButton.setTitle("CLEAR", for: .normal)
+//        //31 February
+//        if day >= 1 && day <= 31 && month >= 1 && month <= 12{
+//            let weekday = dateFormatter.string(from: date)
+//            resultLabel.text = weekday.capitalized
+//        }else{
+//            warningAlert(withTitle: "Error!", withMessage: "Wrong Date, please enter the correct Date!")
+//        }
+//    default:
+//        findButton.setTitle("FIND", for: .normal)
+//        //clear
+//        clearTextFields()
+//    }
     
     @IBAction func shareButtonTapped(_ sender: Any) {
         shareData([titleString])

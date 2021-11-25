@@ -80,11 +80,11 @@
 		FCBBCCC3274BD30C007DDDEE /* FrenchFilmTop */ = {
 			isa = PBXGroup;
 			children = (
+				FCBBCCDB274BD322007DDDEE /* Delegate */,
 				FCBBCCEC274C01A9007DDDEE /* Extension */,
 				FCBBCCDE274BD36C007DDDEE /* Model */,
-				FCBBCCDB274BD322007DDDEE /* Delegate */,
-				FCBBCCDD274BD355007DDDEE /* Controllers */,
 				FCBBCCDC274BD340007DDDEE /* View */,
+				FCBBCCDD274BD355007DDDEE /* Controllers */,
 				FCBBCCD0274BD311007DDDEE /* Assets.xcassets */,
 				FCBBCCD5274BD311007DDDEE /* Info.plist */,
 				FCBBCCCD274BD30C007DDDEE /* FrenchFilmTop.xcdatamodeld */,

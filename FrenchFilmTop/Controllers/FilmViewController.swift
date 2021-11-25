@@ -92,6 +92,7 @@ extension FilmViewController: UITableViewDelegate, UITableViewDataSource {
         cell.titleLabel.numberOfLines = 0
         cell.dateForCell.text = "Release date: \(item.release_date)"
         cell.voteLabel.text = "rated \(String(item.vote_average))"
+        cell.numberOfVotes.text = "\(item.vote_count) votes"
         cell.imageForCell.sd_setImage(with:URL(string: imagePath + item.poster_path), placeholderImage: UIImage(named: "film.jpg"))
         
         return cell

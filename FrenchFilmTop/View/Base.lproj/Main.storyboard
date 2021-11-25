@@ -1,45 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nKh-rd-Teo">
-    <device id="retina3_5" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--French Top Films-->
+        <!--Top Films-->
         <scene sceneID="maF-7l-au7">
             <objects>
                 <viewController id="qRG-c1-uzX" customClass="FilmViewController" customModule="FrenchFilmTop" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="n6V-2w-R1z">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="jF7-bq-Jpe">
-                                <rect key="frame" x="0.0" y="44" width="320" height="488"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="826"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <activityIndicatorView key="tableFooterView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" id="nHL-6E-50H">
-                                    <rect key="frame" x="0.0" y="373" width="320" height="44"/>
+                                    <rect key="frame" x="0.0" y="373" width="414" height="44"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 </activityIndicatorView>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="filmCell" rowHeight="306" id="BN4-7b-qXZ" customClass="FilmTableViewCell" customModule="FrenchFilmTop" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="320" height="306"/>
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="306"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BN4-7b-qXZ" id="Lh4-Lv-AQ1">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="306"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="306"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="XV8-Z2-ukv">
-                                                    <rect key="frame" x="16" y="11" width="288" height="284"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="ShV-S9-AuC">
+                                                    <rect key="frame" x="8" y="11" width="386" height="284"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shang-chi" translatesAutoresizingMaskIntoConstraints="NO" id="7a1-57-cpc">
-                                                            <rect key="frame" x="0.0" y="0.0" width="140" height="284"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="223" height="284"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="16p-Qu-6Zi"/>
-                                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="210" id="xwt-cq-9eh"/>
+                                                                <constraint firstAttribute="height" constant="284" id="4xR-4F-4lL"/>
+                                                                <constraint firstAttribute="width" constant="223" id="Ysc-Q6-HdJ"/>
                                                             </constraints>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -49,49 +50,39 @@
                                                                 <userDefinedRuntimeAttribute type="boolean" keyPath="layer.roundedImage" value="YES"/>
                                                             </userDefinedRuntimeAttributes>
                                                         </imageView>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="sCC-p7-Xs3">
-                                                            <rect key="frame" x="156" y="68" width="132" height="148"/>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="nf6-Ef-Dbo">
+                                                            <rect key="frame" x="239" y="26" width="147" height="232"/>
                                                             <subviews>
-                                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="sGI-Pa-Z0D">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="124" height="45"/>
-                                                                    <subviews>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vlQ-0O-15m">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="124" height="45"/>
-                                                                            <constraints>
-                                                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="JlR-Nc-qEL"/>
-                                                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="124" id="Zoe-dm-EFs"/>
-                                                                            </constraints>
-                                                                            <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="20"/>
-                                                                            <nil key="textColor"/>
-                                                                            <nil key="highlightedColor"/>
-                                                                            <userDefinedRuntimeAttributes>
-                                                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                                                    <integer key="value" value="6"/>
-                                                                                </userDefinedRuntimeAttribute>
-                                                                            </userDefinedRuntimeAttributes>
-                                                                        </label>
-                                                                    </subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vlQ-0O-15m">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="147" height="45"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="JlR-Nc-qEL"/>
+                                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="124" id="Zoe-dm-EFs"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="22"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
                                                                     <userDefinedRuntimeAttributes>
                                                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                                             <integer key="value" value="6"/>
                                                                         </userDefinedRuntimeAttribute>
                                                                     </userDefinedRuntimeAttributes>
-                                                                </stackView>
+                                                                </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Release date:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f3H-eg-sQ7">
-                                                                    <rect key="frame" x="0.0" y="65" width="124" height="36"/>
+                                                                    <rect key="frame" x="0.0" y="75" width="147" height="36"/>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="36" id="9S7-Ue-ANC"/>
-                                                                        <constraint firstAttribute="width" constant="124" id="odo-aL-XiK"/>
+                                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="36" id="Pvh-HD-gtd"/>
+                                                                        <constraint firstAttribute="width" constant="147" id="kc1-lV-DS2"/>
                                                                     </constraints>
-                                                                    <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="16"/>
+                                                                    <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="18"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Cv5-kP-ksR">
-                                                                    <rect key="frame" x="0.0" y="121" width="132" height="27"/>
+                                                                    <rect key="frame" x="0.0" y="141" width="147" height="27"/>
                                                                     <subviews>
                                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dMM-gP-5cg">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="35" height="27"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="47" height="27"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="height" constant="27" id="ReD-OV-Q81"/>
                                                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="35" id="cD5-ew-ks2"/>
@@ -102,45 +93,49 @@
                                                                             </buttonConfiguration>
                                                                         </button>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="votes" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nX2-6M-bzS">
-                                                                            <rect key="frame" x="65" y="0.0" width="67" height="27"/>
+                                                                            <rect key="frame" x="77" y="0.0" width="70" height="27"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="KxZ-eg-1j5"/>
                                                                                 <constraint firstAttribute="height" constant="27" id="Ots-NA-ATh"/>
                                                                             </constraints>
-                                                                            <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="14"/>
+                                                                            <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="16"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                     </subviews>
                                                                     <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="27" id="FVy-PR-xPq"/>
+                                                                        <constraint firstAttribute="width" constant="147" id="hf3-Hc-QOb"/>
+                                                                    </constraints>
                                                                     <userDefinedRuntimeAttributes>
                                                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                                             <integer key="value" value="6"/>
                                                                         </userDefinedRuntimeAttribute>
                                                                     </userDefinedRuntimeAttributes>
                                                                 </stackView>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5861 votes" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vie-Zw-XO3">
+                                                                    <rect key="frame" x="0.0" y="198" width="147" height="34"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="147" id="I27-PC-cHC"/>
+                                                                        <constraint firstAttribute="height" constant="34" id="Mo0-vJ-swh"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="18"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
                                                             </subviews>
-                                                            <userDefinedRuntimeAttributes>
-                                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                                    <integer key="value" value="6"/>
-                                                                </userDefinedRuntimeAttribute>
-                                                            </userDefinedRuntimeAttributes>
                                                         </stackView>
                                                     </subviews>
                                                 </stackView>
                                             </subviews>
-                                            <constraints>
-                                                <constraint firstItem="XV8-Z2-ukv" firstAttribute="centerY" secondItem="Lh4-Lv-AQ1" secondAttribute="centerY" id="7Fu-q1-twF"/>
-                                                <constraint firstItem="XV8-Z2-ukv" firstAttribute="centerX" secondItem="Lh4-Lv-AQ1" secondAttribute="centerX" id="EPC-mb-wrC"/>
-                                                <constraint firstItem="XV8-Z2-ukv" firstAttribute="top" secondItem="Lh4-Lv-AQ1" secondAttribute="topMargin" id="IpI-BB-a4h"/>
-                                                <constraint firstItem="XV8-Z2-ukv" firstAttribute="leading" secondItem="Lh4-Lv-AQ1" secondAttribute="leadingMargin" id="UiR-0k-SCB"/>
-                                            </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" name="MyColorSet"/>
                                         <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
                                         <connections>
                                             <outlet property="dateForCell" destination="f3H-eg-sQ7" id="IoB-Sm-ZvI"/>
                                             <outlet property="imageForCell" destination="7a1-57-cpc" id="wHt-6E-95U"/>
+                                            <outlet property="numberOfVotes" destination="Vie-Zw-XO3" id="qIX-qE-ukd"/>
                                             <outlet property="titleLabel" destination="vlQ-0O-15m" id="c8a-xk-z0d"/>
                                             <outlet property="voteLabel" destination="nX2-6M-bzS" id="8ok-iX-v1w"/>
                                         </connections>
@@ -160,7 +155,7 @@
                             <constraint firstItem="xmL-4H-XhU" firstAttribute="trailing" secondItem="jF7-bq-Jpe" secondAttribute="trailing" id="wup-Re-K0F"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="French Top Films" id="7v9-gx-yIg">
+                    <navigationItem key="navigationItem" title="Top Films" id="7v9-gx-yIg">
                         <barButtonItem key="leftBarButtonItem" image="info.circle.fill" catalog="system" id="ikr-40-V0T">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
@@ -183,18 +178,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cFv-Di-NRn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="157" y="-452"/>
+            <point key="canvasLocation" x="153.62318840579712" y="-529.01785714285711"/>
         </scene>
         <!--Appearence View Controller-->
         <scene sceneID="yZ3-G5-wNz">
             <objects>
                 <viewController storyboardIdentifier="AppearenceViewController" id="AEB-6c-0ac" customClass="AppearenceViewController" customModule="FrenchFilmTop" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RiK-cL-NEA">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="47" translatesAutoresizingMaskIntoConstraints="NO" id="lKh-6R-SHk">
-                                <rect key="frame" x="73" y="132.5" width="180" height="142"/>
+                                <rect key="frame" x="120" y="345.5" width="180" height="142"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Light Mode is ON" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ned-lB-n1y">
                                         <rect key="frame" x="0.0" y="0.0" width="180" height="60"/>
@@ -242,97 +237,101 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ban-jJ-I7s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="971" y="-452"/>
+            <point key="canvasLocation" x="968" y="-529"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="8YN-2O-AZx">
             <objects>
                 <viewController storyboardIdentifier="DetailViewController" hidesBottomBarWhenPushed="YES" id="ngn-pV-s0W" customClass="DetailViewController" customModule="FrenchFilmTop" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="u7g-17-Euq">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="iig-z9-1mA">
-                                <rect key="frame" x="16" y="8" width="288" height="464"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="79" translatesAutoresizingMaskIntoConstraints="NO" id="ch7-Px-EY4">
+                                <rect key="frame" x="20" y="67" width="374" height="777"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backdrop" translatesAutoresizingMaskIntoConstraints="NO" id="bdj-m3-ca6">
-                                        <rect key="frame" x="0.0" y="0.0" width="288" height="162"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="162" id="qdO-Yi-QOM"/>
-                                            <constraint firstAttribute="width" constant="288" id="zmm-BA-rOo"/>
-                                        </constraints>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="opY-D4-YV0">
-                                        <rect key="frame" x="0.0" y="181" width="288" height="50"/>
-                                        <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="5y0-7u-ghO"/>
-                                            <constraint firstAttribute="width" constant="288" id="gGE-fa-2Y3"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="20"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="IBQ-Bp-Wi8">
-                                        <rect key="frame" x="0.0" y="250" width="236" height="31"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="Set-Z2-txq">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="653"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Release date:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C1H-j2-kJx">
-                                                <rect key="frame" x="0.0" y="0.0" width="102" height="31"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backdrop" translatesAutoresizingMaskIntoConstraints="NO" id="bdj-m3-ca6">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="211"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="31" id="0J5-qe-bjW"/>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="88" id="Jgq-yt-zTr"/>
+                                                    <constraint firstAttribute="width" constant="374" id="Zkc-UN-Kfh"/>
+                                                    <constraint firstAttribute="height" constant="211" id="a8Z-uT-7Sj"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="13"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="opY-D4-YV0">
+                                                <rect key="frame" x="0.0" y="261" width="374" height="120"/>
+                                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="374" id="3xZ-rz-U9Y"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="120" id="5Eo-Ik-zdo"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="24"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="irh-tI-FXK">
-                                                <rect key="frame" x="134" y="0.0" width="102" height="31"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="deJ-8O-tFy">
+                                                <rect key="frame" x="0.0" y="431" width="374" height="52"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RXC-YC-NAY">
-                                                        <rect key="frame" x="0.0" y="0.0" width="47" height="31"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Release date:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C1H-j2-kJx">
+                                                        <rect key="frame" x="0.0" y="0.0" width="186.5" height="52"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="31" id="Cx4-IA-wn5"/>
-                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="47" id="GbX-3G-wPg"/>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="181" id="K5Y-Qh-ZI2"/>
                                                         </constraints>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" image="star.fill" catalog="system">
-                                                            <color key="baseForegroundColor" red="1" green="0.87208425000000001" blue="0.1897312545" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        </buttonConfiguration>
-                                                    </button>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="votes" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Gb-q1-UHy">
-                                                        <rect key="frame" x="55" y="0.0" width="47" height="31"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="47" id="fWU-S4-lwA"/>
-                                                            <constraint firstAttribute="height" constant="31" id="mMN-Ae-yb8"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="14"/>
+                                                        <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="16"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nY0-fk-Jpe">
+                                                        <rect key="frame" x="187.5" y="0.0" width="186.5" height="52"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RXC-YC-NAY">
+                                                                <rect key="frame" x="0.0" y="0.0" width="116.5" height="52"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="52" id="vJW-hS-Tx9"/>
+                                                                </constraints>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain">
+                                                                    <imageReference key="image" image="star.fill" catalog="system" symbolScale="large"/>
+                                                                    <color key="baseForegroundColor" red="1" green="0.87208425000000001" blue="0.1897312545" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                </buttonConfiguration>
+                                                            </button>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="votes" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Gb-q1-UHy">
+                                                                <rect key="frame" x="116.5" y="0.0" width="70" height="52"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="52" id="8nj-hx-47u"/>
+                                                                    <constraint firstAttribute="width" constant="70" id="TZd-vm-64m"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="16"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
                                                 </subviews>
                                             </stackView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="3fx-Vm-vHj">
+                                                <rect key="frame" x="0.0" y="533" width="374" height="120"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="374" id="OIq-no-ca8"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="gly-Z1-JqV"/>
+                                                </constraints>
+                                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="16"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </textView>
                                         </subviews>
                                     </stackView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="3fx-Vm-vHj">
-                                        <rect key="frame" x="0.0" y="300" width="288" height="100"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="288" id="Yxd-Oa-YJB"/>
-                                            <constraint firstAttribute="height" constant="100" id="sNy-5M-1Vz"/>
-                                        </constraints>
-                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                        <color key="textColor" systemColor="labelColor"/>
-                                        <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="10"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </textView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="53" translatesAutoresizingMaskIntoConstraints="NO" id="l9i-96-zLO">
-                                        <rect key="frame" x="0.0" y="419" width="288" height="45"/>
+                                        <rect key="frame" x="43" y="732" width="288" height="45"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c0F-a7-BO2" customClass="DesignButton" customModule="FrenchFilmTop" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="173" height="45"/>
@@ -361,7 +360,8 @@
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="62" id="hAp-XF-opw"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="arrowshape.turn.up.forward.fill" catalog="system">
+                                                <buttonConfiguration key="configuration" style="plain">
+                                                    <imageReference key="image" image="arrowshape.turn.up.forward.fill" catalog="system" symbolScale="large"/>
                                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                                 </buttonConfiguration>
                                                 <connections>
@@ -372,7 +372,7 @@
                                     </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="l9i-96-zLO" firstAttribute="top" relation="greaterThanOrEqual" secondItem="3fx-Vm-vHj" secondAttribute="bottom" constant="19" id="qsm-6W-gK6"/>
+                                    <constraint firstItem="l9i-96-zLO" firstAttribute="top" secondItem="Set-Z2-txq" secondAttribute="bottom" constant="79" id="Auz-6b-jgh"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -380,8 +380,10 @@
                         <color key="backgroundColor" name="MyColorSet"/>
                         <color key="tintColor" systemColor="labelColor"/>
                         <constraints>
-                            <constraint firstItem="iig-z9-1mA" firstAttribute="centerY" secondItem="yYo-jr-6NP" secondAttribute="centerY" id="QEk-Vr-9jb"/>
-                            <constraint firstItem="iig-z9-1mA" firstAttribute="centerX" secondItem="yYo-jr-6NP" secondAttribute="centerX" id="RFF-WJ-PFa"/>
+                            <constraint firstItem="ch7-Px-EY4" firstAttribute="top" secondItem="yYo-jr-6NP" secondAttribute="top" constant="23" id="4oI-WY-CZB"/>
+                            <constraint firstItem="yYo-jr-6NP" firstAttribute="trailing" secondItem="ch7-Px-EY4" secondAttribute="trailing" constant="20" id="JcY-7x-UbO"/>
+                            <constraint firstItem="ch7-Px-EY4" firstAttribute="leading" secondItem="yYo-jr-6NP" secondAttribute="leading" constant="20" id="NOD-Wu-R14"/>
+                            <constraint firstItem="yYo-jr-6NP" firstAttribute="bottom" secondItem="ch7-Px-EY4" secondAttribute="bottom" constant="18" id="fG5-kz-PjI"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
@@ -396,20 +398,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AQ2-29-upS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1783" y="-452"/>
+            <point key="canvasLocation" x="1734.7826086956522" y="-530.35714285714289"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ai5-aS-BkS">
             <objects>
                 <navigationController id="gA3-o8-vpw" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="heart.fill" catalog="system" id="Aar-1A-bv2"/>
+                    <tabBarItem key="tabBarItem" title="" image="heart.fill" catalog="system" id="Aar-1A-bv2">
+                        <color key="badgeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="bKL-ko-cgF">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" name="NavigationColors"/>
+                        <color key="tintColor" systemColor="labelColor"/>
                         <color key="barTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <textAttributes key="titleTextAttributes">
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textColor" systemColor="labelColor"/>
                         </textAttributes>
                     </navigationBar>
                     <connections>
@@ -418,7 +422,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FJP-B0-4Qg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-646" y="1022"/>
+            <point key="canvasLocation" x="-647" y="1113"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="UKC-ZO-bJU">
@@ -428,11 +432,11 @@
                         <color key="badgeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="kcg-Dq-jOd">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" name="NavigationColors"/>
+                        <color key="tintColor" systemColor="labelColor"/>
                         <textAttributes key="titleTextAttributes">
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textColor" systemColor="labelColor"/>
                         </textAttributes>
                     </navigationBar>
                     <connections>
@@ -448,130 +452,146 @@
             <objects>
                 <viewController storyboardIdentifier="WatchViewController" id="4c6-vQ-yId" customClass="WatchViewController" customModule="FrenchFilmTop" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Lqd-7j-N6Z">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="47" translatesAutoresizingMaskIntoConstraints="NO" id="Gld-39-sYP">
-                                <rect key="frame" x="43" y="81" width="234" height="313"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="46" translatesAutoresizingMaskIntoConstraints="NO" id="huI-Hr-MpX">
+                                <rect key="frame" x="90" y="143" width="234" height="423"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="5w6-Mh-uci">
-                                        <rect key="frame" x="0.0" y="0.0" width="234" height="43"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Here you can find and choose one of the most popular TV and movie watching channels." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c3X-jR-pud">
+                                        <rect key="frame" x="0.0" y="0.0" width="234" height="64"/>
+                                        <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="234" id="8NB-gA-SF9"/>
+                                            <constraint firstAttribute="height" constant="64" id="sXQ-q6-jLf"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="47" translatesAutoresizingMaskIntoConstraints="NO" id="Gld-39-sYP">
+                                        <rect key="frame" x="0.0" y="110" width="234" height="313"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="netflixjpg" translatesAutoresizingMaskIntoConstraints="NO" id="D3E-ln-rZr">
-                                                <rect key="frame" x="0.0" y="0.0" width="43" height="43"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="43" id="bkG-GB-WJu"/>
-                                                    <constraint firstAttribute="height" constant="43" id="rkr-hY-V7r"/>
-                                                </constraints>
-                                            </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rpz-wm-Z32" customClass="DesignButton" customModule="FrenchFilmTop" customModuleProvider="target">
-                                                <rect key="frame" x="51" y="0.0" width="183" height="43"/>
-                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="183" id="MYa-Dz-XtF"/>
-                                                </constraints>
-                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Netflix"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                        <integer key="value" value="6"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="netflixTapped:" destination="4c6-vQ-yId" eventType="touchUpInside" id="V6o-yZ-au9"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="5uS-i9-AXI">
-                                        <rect key="frame" x="0.0" y="90" width="234" height="43"/>
-                                        <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="amazon" translatesAutoresizingMaskIntoConstraints="NO" id="aR6-2X-ciK">
-                                                <rect key="frame" x="0.0" y="0.0" width="43" height="43"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="43" id="jyW-vf-EYI"/>
-                                                    <constraint firstAttribute="height" constant="43" id="qhT-pk-Qt0"/>
-                                                </constraints>
-                                            </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ha-oa-Mis" customClass="DesignButton" customModule="FrenchFilmTop" customModuleProvider="target">
-                                                <rect key="frame" x="51" y="0.0" width="183" height="43"/>
-                                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="183" id="EYb-Gf-pnl"/>
-                                                </constraints>
-                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Amazon"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                        <integer key="value" value="6"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="amazonTapped:" destination="4c6-vQ-yId" eventType="touchUpInside" id="CNW-EM-jXL"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="olh-Or-dtL">
-                                        <rect key="frame" x="0.0" y="180" width="234" height="43"/>
-                                        <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iTunes" translatesAutoresizingMaskIntoConstraints="NO" id="xvE-0K-49h">
-                                                <rect key="frame" x="0.0" y="0.0" width="43" height="43"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="43" id="YMX-Ty-NNt"/>
-                                                    <constraint firstAttribute="width" constant="43" id="syZ-wV-Zfo"/>
-                                                </constraints>
-                                            </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lzx-5C-J9M" customClass="DesignButton" customModule="FrenchFilmTop" customModuleProvider="target">
-                                                <rect key="frame" x="51" y="0.0" width="183" height="43"/>
-                                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="183" id="gZP-HP-KFU"/>
-                                                </constraints>
-                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="iTunes"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                        <integer key="value" value="6"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="iTunesTapped:" destination="4c6-vQ-yId" eventType="touchUpInside" id="OxO-Is-mKW"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="D1j-yV-NH8">
-                                        <rect key="frame" x="0.0" y="270" width="234" height="43"/>
-                                        <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hulu" translatesAutoresizingMaskIntoConstraints="NO" id="65i-o6-GhP">
-                                                <rect key="frame" x="0.0" y="0.0" width="43" height="43"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="43" id="Z0W-UT-0Ik"/>
-                                                    <constraint firstAttribute="width" constant="43" id="t7A-ez-enm"/>
-                                                </constraints>
-                                            </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hFr-jE-fQk" customClass="DesignButton" customModule="FrenchFilmTop" customModuleProvider="target">
-                                                <rect key="frame" x="51" y="0.0" width="183" height="43"/>
-                                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="183" id="q1n-mW-bMz"/>
-                                                </constraints>
-                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Hulu"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                        <integer key="value" value="6"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="huluTapped:" destination="4c6-vQ-yId" eventType="touchUpInside" id="jrA-IH-XeM"/>
-                                                </connections>
-                                            </button>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="5w6-Mh-uci">
+                                                <rect key="frame" x="0.0" y="0.0" width="234" height="43"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="netflixjpg" translatesAutoresizingMaskIntoConstraints="NO" id="D3E-ln-rZr">
+                                                        <rect key="frame" x="0.0" y="0.0" width="43" height="43"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="43" id="bkG-GB-WJu"/>
+                                                            <constraint firstAttribute="height" constant="43" id="rkr-hY-V7r"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rpz-wm-Z32" customClass="DesignButton" customModule="FrenchFilmTop" customModuleProvider="target">
+                                                        <rect key="frame" x="51" y="0.0" width="183" height="43"/>
+                                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="183" id="MYa-Dz-XtF"/>
+                                                        </constraints>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Netflix"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="6"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="netflixTapped:" destination="4c6-vQ-yId" eventType="touchUpInside" id="V6o-yZ-au9"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="5uS-i9-AXI">
+                                                <rect key="frame" x="0.0" y="90" width="234" height="43"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="amazon" translatesAutoresizingMaskIntoConstraints="NO" id="aR6-2X-ciK">
+                                                        <rect key="frame" x="0.0" y="0.0" width="43" height="43"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="43" id="jyW-vf-EYI"/>
+                                                            <constraint firstAttribute="height" constant="43" id="qhT-pk-Qt0"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ha-oa-Mis" customClass="DesignButton" customModule="FrenchFilmTop" customModuleProvider="target">
+                                                        <rect key="frame" x="51" y="0.0" width="183" height="43"/>
+                                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="183" id="EYb-Gf-pnl"/>
+                                                        </constraints>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Amazon"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="6"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="amazonTapped:" destination="4c6-vQ-yId" eventType="touchUpInside" id="CNW-EM-jXL"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="olh-Or-dtL">
+                                                <rect key="frame" x="0.0" y="180" width="234" height="43"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iTunes" translatesAutoresizingMaskIntoConstraints="NO" id="xvE-0K-49h">
+                                                        <rect key="frame" x="0.0" y="0.0" width="43" height="43"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="43" id="YMX-Ty-NNt"/>
+                                                            <constraint firstAttribute="width" constant="43" id="syZ-wV-Zfo"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lzx-5C-J9M" customClass="DesignButton" customModule="FrenchFilmTop" customModuleProvider="target">
+                                                        <rect key="frame" x="51" y="0.0" width="183" height="43"/>
+                                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="183" id="gZP-HP-KFU"/>
+                                                        </constraints>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="iTunes"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="6"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="iTunesTapped:" destination="4c6-vQ-yId" eventType="touchUpInside" id="OxO-Is-mKW"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="D1j-yV-NH8">
+                                                <rect key="frame" x="0.0" y="270" width="234" height="43"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hulu" translatesAutoresizingMaskIntoConstraints="NO" id="65i-o6-GhP">
+                                                        <rect key="frame" x="0.0" y="0.0" width="43" height="43"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="43" id="Z0W-UT-0Ik"/>
+                                                            <constraint firstAttribute="width" constant="43" id="t7A-ez-enm"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hFr-jE-fQk" customClass="DesignButton" customModule="FrenchFilmTop" customModuleProvider="target">
+                                                        <rect key="frame" x="51" y="0.0" width="183" height="43"/>
+                                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="183" id="q1n-mW-bMz"/>
+                                                        </constraints>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Hulu"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="6"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="huluTapped:" destination="4c6-vQ-yId" eventType="touchUpInside" id="jrA-IH-XeM"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
                                     </stackView>
                                 </subviews>
@@ -580,13 +600,14 @@
                         <viewLayoutGuide key="safeArea" id="xpT-3U-Z7e"/>
                         <color key="backgroundColor" name="MyColorSet"/>
                         <constraints>
-                            <constraint firstItem="Gld-39-sYP" firstAttribute="centerX" secondItem="xpT-3U-Z7e" secondAttribute="centerX" id="Qe8-0S-OHm"/>
-                            <constraint firstItem="Gld-39-sYP" firstAttribute="centerY" secondItem="xpT-3U-Z7e" secondAttribute="centerY" id="Vzn-Kc-6c8"/>
+                            <constraint firstItem="xpT-3U-Z7e" firstAttribute="trailing" secondItem="huI-Hr-MpX" secondAttribute="trailing" constant="90" id="OG9-ww-Z15"/>
+                            <constraint firstItem="huI-Hr-MpX" firstAttribute="leading" secondItem="xpT-3U-Z7e" secondAttribute="leading" constant="90" id="UG1-sv-390"/>
+                            <constraint firstItem="huI-Hr-MpX" firstAttribute="top" secondItem="xpT-3U-Z7e" secondAttribute="top" constant="55" id="i8I-6D-1JJ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Where to Watch" id="G0a-UO-hWh">
-                        <barButtonItem key="leftBarButtonItem" image="info.circle.fill" catalog="system" id="RSF-Gz-aE6">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <barButtonItem key="leftBarButtonItem" image="info.circle.fill" catalog="system" id="WXe-6U-4gn">
+                            <color key="tintColor" systemColor="labelColor"/>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -598,26 +619,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sw7-ve-BjN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="153.75" y="262.5"/>
+            <point key="canvasLocation" x="153.62318840579712" y="262.5"/>
         </scene>
         <!--My Favourites-->
         <scene sceneID="KOm-Ly-g6n">
             <objects>
                 <tableViewController id="7WX-Q4-3oI" customClass="FavouriteTableViewController" customModule="FrenchFilmTop" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="8CJ-Mi-UCE">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" name="MyColorSet"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="favouritesCell" rowHeight="255" id="sGX-Cw-naN" customClass="FilmTableViewCell" customModule="FrenchFilmTop" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="44.5" width="320" height="255"/>
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="255"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sGX-Cw-naN" id="RWb-C4-wtB">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="255"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="255"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="7oC-Ro-ZUd">
-                                            <rect key="frame" x="15.5" y="22.5" width="289" height="210"/>
+                                            <rect key="frame" x="62.5" y="22.5" width="289" height="210"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shang-chi" translatesAutoresizingMaskIntoConstraints="NO" id="R7t-yQ-dyA">
                                                     <rect key="frame" x="0.0" y="0.0" width="140" height="210"/>
@@ -631,7 +652,7 @@
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gdf-kx-LQO">
                                                             <rect key="frame" x="0.0" y="0.0" width="124" height="45"/>
-                                                            <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                                            <color key="backgroundColor" systemColor="systemGray6Color"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="124" id="1N1-06-CM3"/>
                                                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="R6O-Ds-xH4"/>
@@ -713,13 +734,13 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="My Favourites" id="Wp8-Zg-KCB">
                         <barButtonItem key="leftBarButtonItem" image="info.circle.fill" catalog="system" id="2mB-qk-6TN">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="tintColor" systemColor="labelColor"/>
                             <connections>
                                 <action selector="infoButtonTapped:" destination="7WX-Q4-3oI" id="U3e-UQ-uMq"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="pencil.circle" catalog="system" id="eoj-1c-7pi">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="tintColor" systemColor="labelColor"/>
                             <connections>
                                 <action selector="editButtonTapped:" destination="7WX-Q4-3oI" id="hTc-bL-QWS"/>
                             </connections>
@@ -731,18 +752,18 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f25-mn-bji" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="156" y="1022"/>
+            <point key="canvasLocation" x="156" y="1113"/>
         </scene>
         <!--Web View Controller-->
         <scene sceneID="UXW-kT-23B">
             <objects>
                 <viewController storyboardIdentifier="WebViewController" id="7WS-fX-wNZ" customClass="WebViewController" customModule="FrenchFilmTop" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="809-If-4bn">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e0d-t7-U1V">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="554"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="892"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
@@ -766,7 +787,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="USq-mH-xA2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1011" y="264"/>
+            <point key="canvasLocation" x="969" y="264"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="TdQ-gT-ZR3">
@@ -786,7 +807,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u75-lA-Ece" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1479" y="264"/>
+            <point key="canvasLocation" x="-1444" y="264"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="1RE-Ma-16Z">
@@ -794,14 +815,12 @@
                 <navigationController id="riH-Gf-hID" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="film" catalog="system" id="ntm-5L-UfK"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="LD1-dD-A4v">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" name="NavigationColors"/>
-                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="barTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" systemColor="labelColor"/>
+                        <color key="barTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <color key="textShadowColor" systemColor="systemGrayColor"/>
                         </textAttributes>
                     </navigationBar>
                     <connections>
@@ -810,7 +829,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lEt-gl-kXV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-646" y="-452"/>
+            <point key="canvasLocation" x="-647" y="-528"/>
         </scene>
     </scenes>
     <designables>
@@ -851,9 +870,6 @@
         <namedColor name="MyColorSet">
             <color red="0.86000001430511475" green="0.86900001764297485" blue="0.86900001764297485" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="NavigationColors">
-            <color red="0.13300000131130219" green="0.13300000131130219" blue="0.13300000131130219" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
@@ -863,8 +879,8 @@
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemGrayColor">
-            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
