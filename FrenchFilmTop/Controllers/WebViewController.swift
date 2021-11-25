@@ -10,7 +10,10 @@ import WebKit
 
 class WebViewController: UIViewController, WKNavigationDelegate {
 
-    var urlString = String()
+    var netflix = String()
+    var amazon = String()
+    var itunes = String()
+    var hulu = String()
     
     @IBOutlet weak var webView: WKWebView!
     
@@ -18,8 +21,17 @@ class WebViewController: UIViewController, WKNavigationDelegate {
         super.viewDidLoad()
 
         self.title = "Web"
-        guard let url = URL(string: urlString) else {return}
         
+        guard let url = URL(string: netflix) else {return}
+        webView.load(URLRequest(url: url))
+        
+        guard let url = URL(string: amazon) else {return}
+        webView.load(URLRequest(url: url))
+        
+        guard let url = URL(string: itunes) else {return}
+        webView.load(URLRequest(url: url))
+        
+        guard let url = URL(string: hulu) else {return}
         webView.load(URLRequest(url: url))
     }
     

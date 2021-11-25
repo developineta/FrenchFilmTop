@@ -91,7 +91,7 @@ extension FilmViewController: UITableViewDelegate, UITableViewDataSource {
         cell.titleLabel.text = item.title
         cell.titleLabel.numberOfLines = 0
         cell.dateForCell.text = "Release date: \(item.release_date)"
-        cell.voteLabel.text = String(item.vote_average)
+        cell.voteLabel.text = "rated \(String(item.vote_average))"
         cell.imageForCell.sd_setImage(with:URL(string: imagePath + item.poster_path), placeholderImage: UIImage(named: "film.jpg"))
         
         return cell
@@ -117,9 +117,4 @@ extension FilmViewController: UITableViewDelegate, UITableViewDataSource {
         //        present(vc, animated: true, completion: nil)
         navigationController?.pushViewController(vc, animated: true)
     }
-    
-
-     // MARK: - Navigation
-
 }
- 
