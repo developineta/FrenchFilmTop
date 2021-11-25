@@ -62,7 +62,16 @@ class FavouriteTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
+        
+        if savedItems.count == 0 {
+            UIGraphicsBeginImageContext(self.view.frame.size)
+            UIImage(named: "paper-background.png")?.draw(in: self.view.bounds)
+            let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+            UIGraphicsEndImageContext()
+            self.view.backgroundColor = UIColor(patternImage: image)
+        } else if savedItems.count > 0 {
+            self.view.backgroundColor = UIColor.gray
+        }
         return savedItems.count
     }
     
@@ -80,6 +89,8 @@ class FavouriteTableViewController: UITableViewController {
         cell.imageForCell.sd_setImage(with: URL(string: item.image ?? ""), placeholderImage: UIImage(named: "film.jpg"))
         return cell
     }
+    
+    
     
     /*override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 

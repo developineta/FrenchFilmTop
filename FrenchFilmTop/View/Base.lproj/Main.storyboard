@@ -458,7 +458,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="46" translatesAutoresizingMaskIntoConstraints="NO" id="huI-Hr-MpX">
                                 <rect key="frame" x="90" y="143" width="234" height="423"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Here you can find and choose one of the most popular TV and movie watching channels." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c3X-jR-pud">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Here you can find and choose one of the most popular TV and movie watching channels" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c3X-jR-pud">
                                         <rect key="frame" x="0.0" y="0.0" width="234" height="64"/>
                                         <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -608,6 +608,9 @@
                     <navigationItem key="navigationItem" title="Where to Watch" id="G0a-UO-hWh">
                         <barButtonItem key="leftBarButtonItem" image="info.circle.fill" catalog="system" id="WXe-6U-4gn">
                             <color key="tintColor" systemColor="labelColor"/>
+                            <connections>
+                                <action selector="infoButton:" destination="4c6-vQ-yId" id="zqw-zw-b1I"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>

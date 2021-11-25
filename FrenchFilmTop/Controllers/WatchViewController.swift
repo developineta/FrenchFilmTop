@@ -56,6 +56,11 @@ override func viewDidLoad() {
         }
     }
     
+    
+    @IBAction func infoButton(_ sender: Any) {
+        basicAlert(title: "Watching Channel Info", message: "By clicking on one of the watching channels below, you will redirected on it's web page")
+    }
+    
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
