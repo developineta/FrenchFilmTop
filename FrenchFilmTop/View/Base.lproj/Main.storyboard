@@ -389,6 +389,7 @@
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="addButton" destination="c0F-a7-BO2" id="LCT-CZ-2yt"/>
                         <outlet property="detailDate" destination="C1H-j2-kJx" id="Esq-8I-86I"/>
                         <outlet property="detailImage" destination="bdj-m3-ca6" id="ZzG-zk-BAm"/>
                         <outlet property="detailOverview" destination="3fx-Vm-vHj" id="4in-Zq-gIK"/>
@@ -871,7 +872,7 @@
         <image name="star.fill" catalog="system" width="128" height="116"/>
         <image name="tv.inset.filled" catalog="system" width="128" height="97"/>
         <namedColor name="MyColorSet">
-            <color red="0.86000001430511475" green="0.86900001764297485" blue="0.86900001764297485" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.85882352941176465" green="0.87058823529411766" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

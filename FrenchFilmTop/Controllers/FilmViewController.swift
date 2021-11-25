@@ -115,7 +115,6 @@ extension FilmViewController: UITableViewDelegate, UITableViewDataSource {
         vc.descriptionString = item.overview
         vc.posterString = "\(imagePath)\(item.poster_path)"
         
-        //        present(vc, animated: true, completion: nil)
         navigationController?.pushViewController(vc, animated: true)
     }
 }

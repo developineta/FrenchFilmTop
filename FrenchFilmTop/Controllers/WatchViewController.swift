@@ -58,7 +58,7 @@ override func viewDidLoad() {
     
     
     @IBAction func infoButton(_ sender: Any) {
-        basicAlert(title: "Watching Channel Info", message: "By clicking on one of the watching channels below, you will redirected on it's web page")
+        basicAlert(title: "Watching Channel Info", message: "By clicking on one of the watching channels below, you will be redirected on it's web page")
     }
     
     // MARK: - Navigation

@@ -27,7 +27,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var detailVotes: UILabel!
     @IBOutlet weak var detailDate: UILabel!
     @IBOutlet weak var detailOverview: UITextView!
-    
+    @IBOutlet weak var addButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,7 +56,6 @@ class DetailViewController: UIViewController {
     func saveData(){
         do{
             try managedObjectContext?.save()
-            basicAlert(title: savedTitle, message: savedMessage)
         }catch{
             fatalError("Error in saving in core data item")
         }
@@ -66,39 +65,34 @@ class DetailViewController: UIViewController {
     let savedMessage = "Go to heart icon to see your favourite film list"
     
     @IBAction func favouritesButtonTapped(_ sender: Any) {
-        self.checkCompleted = false
-        let filmItem = FrenchFilms(context: self.managedObjectContext!)
-        filmItem.title = titleString
-        filmItem.image = posterString
-        filmItem.voteCount = String(voteDouble)
-        filmItem.overview = descriptionString
-        filmItem.date = dateString
-        filmItem.completed = checkCompleted
-        print("Bool false expected", filmItem.completed)
         
-        if !imageString.isEmpty{
+        switch addButton.titleLabel?.text{
+        case "Add to Favourites":
+            addButton.setTitle("Is Added", for: .normal)
+            let filmItem = FrenchFilms(context: self.managedObjectContext!)
+            filmItem.title = titleString
             filmItem.image = posterString
-        }
-        print("Poster string", posterString)
-        self.savedItems.append(filmItem)
+            filmItem.voteCount = String(voteDouble)
+            filmItem.overview = descriptionString
+            filmItem.date = dateString
+            filmItem.completed = checkCompleted
+            
+            if !imageString.isEmpty{
+                filmItem.image = posterString
+            }
+            self.savedItems.append(filmItem)
+            self.checkCompleted = false
+            
+            basicAlert(title: savedTitle, message: savedMessage)
+            
+        case  "Is Added to Favourites":
+            basicAlert(title: "Favourites Message", message: "Film is already added to Your Favourites")
+            
+        default:
+            addButton.setTitle("Is Added", for: .normal)
+                }
         saveData()
     }
-    
-//    switch findButton.titleLabel?.text{
-//    case "FIND":
-//        findButton.setTitle("CLEAR", for: .normal)
-//        //31 February
-//        if day >= 1 && day <= 31 && month >= 1 && month <= 12{
-//            let weekday = dateFormatter.string(from: date)
-//            resultLabel.text = weekday.capitalized
-//        }else{
-//            warningAlert(withTitle: "Error!", withMessage: "Wrong Date, please enter the correct Date!")
-//        }
-//    default:
-//        findButton.setTitle("FIND", for: .normal)
-//        //clear
-//        clearTextFields()
-//    }
     
     @IBAction func shareButtonTapped(_ sender: Any) {
         shareData([titleString])

@@ -14,8 +14,6 @@ class FavouriteTableViewController: UITableViewController {
     var savedItems = [FrenchFilms]() // CoreData
     var managedObjectContext: NSManagedObjectContext?
     
-    var checkMark = Bool()
-    
     @IBOutlet weak var editButton: UIBarButtonItem!
     
     override func viewDidLoad() {
@@ -32,7 +30,7 @@ class FavouriteTableViewController: UITableViewController {
     }
     
     @IBAction func infoButtonTapped(_ sender: Any) {
-        basicAlert(title: "Favourite Films Info!", message: "In this section you will find your favourite films. If you decide to delete some of them, you can do it by using pencil icon button and click on delete symbol, or alternative way is to pointer on related film and swipe from right side to the left, then press \"delete\"!")
+        basicAlert(title: "Favourite Films Info!", message: "In this section you will find your favourite films. You can check them as as seen by just clicking on the film. If you decide to delete some of them, you can do it by using pencil icon button and click on delete symbol, or alternative way is to pointer on related film and swipe from right side to the left, then press \"delete\"!")
     }
     
     @IBAction func editButtonTapped(_ sender: Any) {
@@ -41,7 +39,6 @@ class FavouriteTableViewController: UITableViewController {
     func saveData(){
         do{
             try managedObjectContext?.save()
-            basicAlert(title: "Deleted", message: "Film deleted from your Favourites list")
         }catch{
             fatalError("Error in saving in core data item")
         }
@@ -70,7 +67,7 @@ class FavouriteTableViewController: UITableViewController {
             UIGraphicsEndImageContext()
             self.view.backgroundColor = UIColor(patternImage: image)
         } else if savedItems.count > 0 {
-            self.view.backgroundColor = UIColor.gray
+            self.view.backgroundColor = UIColor.darkGray
         }
         return savedItems.count
     }
@@ -87,29 +84,16 @@ class FavouriteTableViewController: UITableViewController {
         cell.dateForCell.text = "Release date: " + item.date!
         cell.voteLabel.text = item.voteCount
         cell.imageForCell.sd_setImage(with: URL(string: item.image ?? ""), placeholderImage: UIImage(named: "film.jpg"))
+        cell.accessoryType = item.completed ? .checkmark : .none
         return cell
     }
     
-    
-    
-    /*override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-
-        //let indexPath = tableView.indexPathForSelectedRow() //optional, to get from any UIButton for example
+    // Check mark on the cell
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let item = savedItems[indexPath.row]
-        let currentCell = tableView.cellForRowAtIndexPath(item) as UITableViewCell
-
-        print(currentCell.textLabel!.text)*/
-    
-        /*override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-            shopping[indexPath.row].isCompleted = !shopping[indexPath.row].isCompleted
-            saveData()
-        }*/
-    /*override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let item = savedItems[indexPath.row]
-        cell.checkMark != item.completed
-        //savedItems[indexPath.row].completed = !savedItems[indexPath.row].completed
+        item.completed = true
         saveData()
-    }*/
+    }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 250
@@ -135,21 +119,10 @@ class FavouriteTableViewController: UITableViewController {
         let row = savedItems.remove(at: fromIndexPath.row)
         savedItems.insert(row, at: to.row)
     }
-   
+
     // Override to support conditional rearranging of the table view.
     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the item to be re-orderable.
         return true
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
