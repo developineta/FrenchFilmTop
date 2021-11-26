@@ -872,7 +872,7 @@
         <image name="star.fill" catalog="system" width="128" height="116"/>
         <image name="tv.inset.filled" catalog="system" width="128" height="97"/>
         <namedColor name="MyColorSet">
-            <color red="0.85882352941176465" green="0.87058823529411766" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.85900002717971802" green="0.87099999189376831" blue="0.87099999189376831" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

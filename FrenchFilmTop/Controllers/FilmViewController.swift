@@ -69,7 +69,7 @@ class FilmViewController: UIViewController {
                 let jsonData = try JSONDecoder().decode(Films.self, from: data) // From Model/ Film
                 self.filmItems = jsonData.results
                 DispatchQueue.main.async {
-                    print("self.filmItems:", self.filmItems)
+                    //print("self.filmItems:", self.filmItems)
                     self.tableViewOutlet.reloadData()
                     self.activityIndicator(animated: false)
                 }

@@ -91,7 +91,11 @@ class FavouriteTableViewController: UITableViewController {
     // Check mark on the cell
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let item = savedItems[indexPath.row]
-        item.completed = true
+        if item.completed == false {
+            item.completed = true
+        }else {
+            item.completed = false
+        }
         saveData()
     }
     
